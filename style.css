@@ -1,0 +1,49 @@
+/** reset **/
+html { height: 100dvh;}
+body { height: 100%; margin: 0; color: white; }
+button { background-color: rgba(0,0,0,.25); border: none; box-shadow: 0rem 0.1rem 0.1rem rgba(0,0,0,.5); color: rgba(255,255,255,.95); text-shadow: 0rem 0.1rem 0.1rem rgba(0,0,0,.5); padding: 0.5rem; font-weight: bold; border-radius: 0.25rem; cursor: pointer; }
+
+/** layout/utility **/
+.grid-center {
+  display: grid;
+  place-content: center;
+}
+
+/** app **/
+:root {
+  --padding: 1rem;
+}
+.app {
+  height: 100%;
+  background-image: linear-gradient(0deg, rgb(136, 0, 0, 0.95) 0%, rgba(255, 60, 0, 0.9) 100%);
+  background-blend-mode: difference;
+  transition: background-color ease-in-out 500ms;
+}
+.app.bad-mood {
+  background-color: black;
+}
+.app.good-mood {
+  background-color: midnightblue;
+}
+
+.card {
+  position: relative;
+  min-width: 18rem;
+  box-shadow: 0rem 0rem 1.5rem -0.4rem rgba(0,0,0,.25);
+  padding: var(--padding);
+}
+
+.card ul {
+  padding-bottom: calc(var(--padding)*2);
+}
+
+.card p {
+  position: absolute;
+  bottom: calc(var(--padding)*3);
+}
+
+.card button:nth-child(5) {
+	position: absolute;
+	display: inline-block;
+	right: var(--padding);
+}
