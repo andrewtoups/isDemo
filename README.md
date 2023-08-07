@@ -1,1 +1,1 @@
-Demonstration page for IsJs.
+## Demonstration page for [IsJs](https://github.com/andrewtoups/is.js).
