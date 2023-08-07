@@ -50,6 +50,3 @@ html`
 `;
 
 IsJs.render(app);
-
-window.feelingForgiving = feelingForgiving;
-window.badMood = badMood;
