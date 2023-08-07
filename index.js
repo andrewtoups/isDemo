@@ -15,12 +15,12 @@ const listItems = list.map(item => {
   return c;
 });
 
-const justKidding = (IsJs => {
-  const justKidding = IsJs.newComponent();
-  const { template: html } = justKidding;
+const justKidding = (() => {
+  const c = IsJs.newComponent();
+  const { template: html } = c;
   html`<p>Just kidding haha</p>`;
-  return justKidding;
-})(IsJs);
+  return c;
+})();
 
 const app = IsJs.newComponent();
 const badMood = app.state(true);
