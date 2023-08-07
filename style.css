@@ -45,4 +45,5 @@ button { background-color: rgba(0,0,0,.25); border: none; box-shadow: 0rem 0.1re
 	position: absolute;
 	display: inline-block;
 	right: var(--padding);
+  bottom: calc(var(--padding)*3.5)
 }
