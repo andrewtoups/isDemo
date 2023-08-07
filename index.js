@@ -1,4 +1,4 @@
-import { IsJs } from './is/is.js';
+import { IsJs } from './is.js/is.js';
 
 const list = [
   'React',
