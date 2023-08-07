@@ -20,12 +20,10 @@ button { background-color: rgba(0,0,0,.25); border: none; box-shadow: 0rem 0.1re
   background-blend-mode: difference;
   transition: background-color ease-in-out 500ms;
 }
-.app.bad-mood {
-  background-color: black;
-}
-.app.good-mood {
-  background-color: #005bd0;
-}
+.app.bad-mood           { background-color: black; }
+.app.bad-mood.forgiving { background-color: slategray; }
+
+.app.good-mood           { background-color: #005bd0; }
 
 .card {
   position: relative;
