@@ -26,7 +26,14 @@ const app = IsJs.newComponent();
 const badMood = app.state(true);
 const imSuchAGeminiLol = app.state(false);
 const orDoI = () => { imSuchAGeminiLol.set(true) };
-badMood.onSet(({newVal}) => {if (newVal === true) imSuchAGeminiLol.set(false)});
+const favIco = document.querySelector(`link[rel='icon']`);
+badMood.onSet(({newVal}) => {
+  favIco.setAttribute('href', newVal && imSuchAGeminiLol.is(false) ? 'fav-bad-mood.ico' : 'fav-good-mood.ico');
+  if (newVal === true) imSuchAGeminiLol.set(false);
+});
+imSuchAGeminiLol.onSet(({newVal}) => {
+  if (newVal && badMood.is(true)) favIco.setAttribute('href', 'fav-bad-mood-forgiving.ico');
+});
 const { is, template } = app;
 template`
 <div class='app grid-center' data-class=${is`[${badMood} === true ? 'bad-mood' : 'good-mood', ${imSuchAGeminiLol} && 'forgiving']`}>
